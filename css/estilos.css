@@ -1,0 +1,604 @@
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+   --cor-de-fundo: #F5F5FC;
+   --white: #fff;
+   --cor-de-link: #000;
+   --hard-purple: rgb(108,62,153,1);
+   --white-blue: rgb(85,132,177);
+   --color-celeste: rgb(133,193,229);
+   --gray-blue: rgb(203,226,239);
+   --white-purple:  #6c3e99;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    margin: 0;
+    line-height: 1;
+    padding: 0;
+}
+
+.head{
+    align-items: center;
+    color: var(--cor-de-link);
+    display: flex;
+}
+
+section.menu{
+    align-items: center;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.menu__lista{
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: inherit;
+    justify-content: space-between;
+}
+
+.menu__item{
+    list-style: none;
+}
+.menu__item:last-child .menu__link{
+    margin-right: 0;
+}
+.menu__link{    
+    color:#808080;
+    margin-right: 1.25rem;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+.menu__link.activo{
+   color: #333333;
+   font-weight: bold;
+}
+.menu__link:hover{
+     text-decoration: underline;
+}
+
+/*Seccion menu y Sección redes sociales */
+section.llamada {
+    background: linear-gradient(360deg,#6c3e99 , var(--cor-de-link));
+    color: var(--white);
+    display: grid;
+    padding: 0 10%;
+}
+
+
+.llamada__titulo{
+    align-items: flex-start;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.llamada__descripcion{
+    font-size: 40px;
+}
+
+.llamada__subtitulo{
+    font-size: 22px;
+}
+
+.Redes__Sociales{
+    align-items: center;
+    display: grid;
+    gap: 10%;
+    grid-template-columns: auto auto auto auto;
+    justify-content: flex-start;
+    padding: inherit;
+}
+
+.title__network__item{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.title__network__item__a{
+    align-items: center;
+    display: flex;
+    color: #000;
+}
+
+a.title__network__item__a:hover {
+    text-decoration: underline;
+}
+
+/*Sección Sobre mi*/
+
+section.destacados{
+    background: linear-gradient(to bottom, var(--hard-purple), var(--white-blue));
+    color: var(--white);
+    display: grid;
+    padding: 3rem 10%;
+}
+
+.destacados__container{
+    display: grid;
+    grid-template-columns: 20% 20% 25% 25%;
+}
+
+.destacados__titulo{
+    font-size: 24px;
+}
+
+.destacados__titulo, .about__paragraph, .destacados__container img{
+    grid-column: 1 / 4;
+}
+
+.destacados__titulo{
+    font-size: 24px;
+}
+
+.about__paragraph{
+    font-size: 18px ;
+}
+
+/*Seccion de skills y Seccion hobbies*/
+
+section.skills, .hobbies{
+    padding: 2rem 10%;
+    text-align: center;
+}
+
+.skills__box:hover, .hobbies__box:hover {
+    border-radius: 10px;
+    color: #2a7ae4;
+    position: relative;
+    transition: .7s;
+    transform: scale(1.05);
+}
+
+.skills__title, .hobbies__title{
+    color: var(--white);
+    font-size: 24px;
+}
+
+.skills{
+    background: linear-gradient(to bottom, var(--white-blue), var(--color-celeste));
+}
+
+.hobbies{
+    background: linear-gradient(to bottom, var(--color-celeste), var(--gray-blue));
+}
+
+.skills__line, .hobbies__line{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skills__box, .hobbies__box{
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    height: 174px;
+    width: 15%;    
+}
+
+.skills__img, .hobbies__img{
+    display: flex;
+    font-size: 32px;
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+/* Formacion Académica*/
+
+section.academic {
+    background: linear-gradient(to bottom, var(--gray-blue), var(--gray-blue));
+    display: grid;
+    gap: .5%;
+    grid-template-rows: auto auto;
+    grid-template-columns: 33% 33% 33%;
+    height: 500px;
+    padding: 0 10%;
+}
+
+h1.academic__title {
+    align-items: flex-end;
+    display: grid;
+    grid-column: 1/4;
+    justify-content: center;
+    text-align: center;
+}
+
+.academic__courses{
+    display: grid;
+    gap: 1%;
+    grid-column: 1 / 4;
+}
+
+.academic__courses__box:nth-child(1){
+    display: grid;
+    grid-column: 1 / 2;
+}
+
+.academic__courses__box:nth-child(2){
+    grid-column: 2 / 3;
+}
+
+.academic__courses__box:nth-child(3){
+    grid-column: 3 / 4;
+}
+
+.academic__courses__box:nth-child(3) img{
+    width: 250px
+}
+
+ul.academic__courses__list {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    height: 286px;
+    padding: inherit;
+}
+
+li.academic__courses__item__img {
+    align-items: center;
+    background: var(--cor-de-fundo);
+    box-shadow: 0 1px 5px 2.5px #00000020;
+    display: grid;
+    justify-content: center;
+}
+
+li.academic__courses__item__img:hover {
+    border-radius: 10px;
+    transition: 1s;
+    transform: scale(1.03);
+}
+
+.academic__courses__item__img img{
+    width: 200px
+}
+
+/*seccion experiencia*/
+
+section.experiencia {
+    background: linear-gradient(to bottom, var(--gray-blue), var(--white-purple));
+   /* height: 880px;*/
+}
+
+h1.experiencia__title {
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider{
+    width:90%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    
+    animation: cambio 20s infinite alternate ease-in-out;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+   width: 100%;
+}
+
+@keyframes cambio {
+    0%{ margin-left: 0;}
+    20%{ margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/*Seccion Contacto*/
+
+section.formulario {
+    align-items: center;
+    background: linear-gradient(to bottom, var(--white-purple), rgb(0,0,0));
+    display: grid;
+    height: 788px;
+    padding: 0 10%;
+}
+
+.formulario__contacto {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.formulario__text {
+    align-items: flex-start;
+    display: grid;
+    grid-template-rows: 9% 4% 11% 75%;
+}    
+
+h2.formulario__title {
+    font-size: 32px;
+    grid-row: 1 /2;
+    margin: 0px;
+}
+h3.formulario__subtext{
+    color: var(--white);
+    font-size: 16px;
+}
+
+h3.formulario__subtext:nth-child(2) {
+    grid-row: 2/3;
+}
+
+h3.formulario__subtext:nth-child(3) {
+    grid-row: 3/4;
+}
+
+form.formulario__form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    grid-row: 4/5;
+    justify-content: space-around;
+}
+
+.formulario__container {
+    display: flex;
+    flex-direction: column;
+}
+
+input.formulario__input {
+    background: var(--cor-de-fundo);
+    border-radius: 4px;
+    font-size: 16px;
+    height: 56px;
+    width: 98%;
+}
+
+.input-message-error{
+    color: #db5353;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.formulario__textarea{
+    background: var(--cor-de-fundo);
+    border-radius: 4px;
+    font-size: 16px;
+    height: 133px;
+    resize: none;
+    width: 98%;
+}
+
+button.formulario__botao {
+    background: rgb(175, 16, 175);
+    border-color: var(--white);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 15px;
+    height: 50px;
+    width: 20%;
+}
+
+/*footeer*/
+
+.footer .footer__rodape{
+    color: var(--white);
+    text-align: center;
+}
+
+/* Estilos validación */
+.formulario__input-incorrecto{
+    border: #bb2929 solid 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+
+    /*Menu*/
+        section.menu{
+            align-items: center;
+            display: flex;   
+            flex-direction: column;    
+            padding: inherit;
+        }
+        
+        .menu__lista{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        li.menu__lista__item {
+            align-items: center;
+            border: white solid 1px;
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            width: 99vw;
+        }
+    
+    /*Titulo*/
+        section.llamada{
+            display: flex;
+            flex-direction: column;
+            padding: 0 5%;
+        }
+    
+       /* .title__div {
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }*/
+    
+        .llamada__titulo{
+            margin: 100px 0 20px 0;
+        }
+    
+        .title__network{
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 80px;
+        }
+    /*Sección sobre mi*/
+        section.about{
+            padding: 3rem 5%;
+        }
+    
+        .about__container{
+            display: grid;
+            grid-template-columns: auto;
+            text-align: justify;
+        }
+    
+    
+    /*Skills*/
+        section.skills, section.hobbies{
+            display: flex;
+            flex-direction: column;
+            padding: inherit;
+            text-align: center;
+        }
+    
+        .skills__line, .hobbies__line{
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+    
+        }
+    
+        .skills__box, .hobbies__box{
+            align-items: flex-end;
+            border-radius: 5px;
+            display: flex;
+            height: 174px;
+            margin: 0 0.5rem 1rem;
+            width: 40vw;
+        }
+    /*Hobbies*/
+    
+    /*Formación Académica*/
+        section.academic{
+            display: flex;
+            flex-direction: column;
+            gap: .5%;
+            height: auto;
+            padding: inherit;
+        }
+    
+        h2.academic__title{
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .academic__courses {
+            display: flex;
+            flex-direction: column;
+            gap: 1%;
+        }
+    
+        ul.academic__courses__list {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 5rem;
+            padding: inherit;
+            width: 100vw;
+        }
+        
+        li.academic__courses__item__img {
+            align-items: center;
+            background: var(--cor-de-fundo);
+            display: grid;
+            height: 257px;
+            justify-content: center;
+            width: 80vw;
+        }
+    
+    
+    /*Contacto*/
+        section.formcontato{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding: inherit;      
+        }
+    
+        .formcontato__contacto {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    
+        img.formcontato__img {
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            margin-bottom: 1rem;
+            width: 100vw;
+        }
+    
+        h2.formcontato__title {
+            color: orange;
+            text-align: center;
+        }
+    
+        h3.formcontato__subtext:nth-child(2), h3.formcontato__subtext:nth-child(3) {
+            text-align: center;
+        }
+    
+        .formcontato__form{
+            width: 100vw;
+        }
+    
+        button.formcontato__botao{
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+    /*Footer*/
+    
+    }
+    
+    @media (max-width: 600px) {
+        li.academic__courses__item__img {
+            justify-content: center;
+            width: 100vw;
+        }
+        
+        ul.academic__courses__list {
+            justify-content: center;
+        }
+    }
